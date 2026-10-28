@@ -25,6 +25,10 @@ void registrarPaquete(nodoPaquete*& inicio);
 void mostrarPaquete(nodoPaquete* inicio);
 nodoPaquete* buscarPaquete(nodoPaquete* inicio,int codigo);
 
+// METODOS PARA ADMINISTRAR SOLICITUDES
+void menuSolicitudes(nodoPaquete* inicio);
+void liberarPendientes();
+
 int main(){
   nodoPaquete* inicio = nullptr;
   int opcion;
@@ -36,7 +40,8 @@ int main(){
         cout << "1. Registrar paquete\n";
         cout << "2. Mostrar paquetes\n";
         cout<< "3. Buscar paquete (codigo)\n";
-        cout << "4. Salir\n";
+        cout << "4. Administrar solicitudes\n";
+        cout << "5. Salir\n";
         cout << "Seleccione una opcion: ";
         cin >> opcion;
         
@@ -51,9 +56,7 @@ int main(){
 		cout << "Ingrese el codigo del paquete: "<<endl;
 		cin >> codigo;
 		
-		
-		
-		//CREAMOS UN PUNTERO QUE GUARDARA EL RETORNOO DE LA FUNCION
+		//CREAMOS UN PUNTERO QUE GUARDARA EL RETORNO DE LA FUNCION
 		nodoPaquete* encontrado = buscarPaquete(inicio,codigo);
 		if(encontrado != nullptr){
 			cout<<"\n==PAQUETE ENCONTRADO=="<<endl;
@@ -63,8 +66,11 @@ int main(){
 			cout<<"\nEl paquete no existe"<<endl;
 		}
 	}
-	}while(opcion!= 4);
-	
+	if(opcion == 4){
+		menuSolicitudes(inicio);
+	}
+	}while(opcion!= 5);
+	liberarPendientes();
 	
 return 0;	
 }
