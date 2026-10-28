@@ -2,7 +2,7 @@
 using namespace std;
 
 //COMENZADO PRUEBA 
-//CREAMOS LA ESTRUCTURA QUE ALMACENARA LOS DATOS DEL PAQUETE DE SOFWARE
+//CREAMOS LA ESTRUCTURA QUE ALMACENARA LOS DATOS DEL PAQUETE DE SOFTWARE
 
 struct paquete{
 	int codigo;
@@ -56,7 +56,7 @@ int main(){
 		//CREAMOS UN PUNTERO QUE GUARDARA EL RETORNOO DE LA FUNCION
 		nodoPaquete* encontrado = buscarPaquete(inicio,codigo);
 		if(encontrado != nullptr){
-			cout<<"\n==PAQUETE ECONTRADO=="<<endl;
+			cout<<"\n==PAQUETE ENCONTRADO=="<<endl;
 			cout<<"\nNombre: "<<encontrado->dato.nombre<<endl;
 			cout<<"\nVersion: "<<encontrado->dato.version<<endl;
 		}else{
@@ -68,7 +68,6 @@ int main(){
 	
 return 0;	
 }
-
 
 //METODO PARA REGISTRAR UN PAQUETE
 void registrarPaquete(nodoPaquete*& inicio){
@@ -147,3 +146,104 @@ nodoPaquete* buscarPaquete(nodoPaquete *inicio,int codigo){
 }
 
 
+//ISAMARA: HACER EL CODIGO DE LA PARTE DE REGISTRAR SOLICITUDES DE INSTALACION Y ELIMINACION
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//FATIMA: HACER LA PARTE DE ADMINISTRAR LOS ELEMENTOS PENDIENTES DE PROCESAMIENTOS, MANEJAR DIFERENTES NIVELES DE PRIORIDAD
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//ALISSON: CONTROLAR SITUACIONES COMO SOLICITUDES REPETIDAS, CANCELACIONES Y ERRORES DURANTE EL PROCESO
